@@ -7,27 +7,48 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | NFT preview card component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/main.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
+  <main>
+    <section class="wrapper">
+      <div class="card">
+        <div class="img-box">
+            <img src="./images/icon-view.svg" class="img-view"></img >
+          <img src="./images/image-equilibrium.jpg" class="card-img" alt="">
+          <div class="img-box-shadow"></div>
+        </div>
+        <h1 class="card-title">Equilibrium #3429</h1>
+      
+        <p class="card-description">Our Equilibrium collection promotes balance and calm.</p>
+      
+        <div class="card-values">
+          <p class="price"><img src="./images/icon-ethereum.svg" alt=""> 0.041 ETH</p>
+          <p class="days"><img src="./images/icon-clock.svg" alt=""> 3 days left</p> 
+        </div> 
+        
+        <div class="underline"></div>
 
-  Equilibrium #3429
+        <div class="author">
+          <img src="./images/image-avatar.png" class="author-img"  alt="Autor produktu">
+          <p class="author-info">Creation of <span class="author-name">Jules Wyvern</span></p>
+        </div>
+        
+        
+      </div>
 
-  Our Equilibrium collection promotes balance and calm.
+    </section>
+  </main>
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
+  <footer class="footer">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">Arkadiusz Ruszczak</a>.
+  </footer>
 </body>
 </html>

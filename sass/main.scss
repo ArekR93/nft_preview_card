@@ -1,0 +1,150 @@
+$softBlue: hsl(215,51%,70%);
+$cyan: hsl(178, 100%, 50%);
+$mainBg: hsl(217,54%,11%);
+$cardBg: hsl(216,50%,16%);
+$blueLine: hsl(215,32%,27%);
+$white: hsl(0, 0%,100%);
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    background-color: $mainBg;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .card{
+        background-color: $cardBg;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        width: 350px;
+        max-width: 400px;
+        height: 600px;
+        max-height: 700px;
+        margin: 0 2em;
+        padding: 1.2em;
+        .img-box{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            .card-img{
+                width: 100%;
+                height: 100%;
+                
+            }
+                .img-view{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 2;
+                    display: none;
+                }
+            .img-box-shadow{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $cyan;
+                z-index: 1;
+                opacity: .5;
+                display: none;
+                transition: .5s;
+            }
+            }
+            .img-box:hover .img-box-shadow{
+                display: block;
+            }
+            .img-box:hover .img-view{
+                display: block;
+            }
+
+        }
+        .card-title{
+            color:$white;
+            margin-top: 1em;
+        }
+        .card-description{
+            color: $softBlue;
+            font-weight: 200;
+            font-size: 20px;
+            margin-top: 1em;
+
+        }
+        .card-values{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1em;
+            .price{
+                img{
+                    margin-right: .3em;
+                }
+                color:$cyan;
+            }
+            .days{
+                img{
+                    margin-right: .3em;
+
+                }
+                color:$softBlue;
+            }
+        }
+        .underline{
+            margin-top: 1em;
+            height: 1px;
+            width: 100%;
+            background-color: $softBlue;
+            opacity: .3
+        }
+        .author{
+            margin-top: 1em;
+            display: flex;
+            align-items: center;
+            .author-img{
+                width: 40px;
+                margin-right: .5em;
+                border: 1px solid $white;
+                border-radius: 50%;
+            }
+            .author-info{
+                font-weight: 300;
+                color:$softBlue;
+                .author-name{
+                    color:$white;
+                    cursor: pointer;
+                    transition: color .5s;
+                }
+                .author-name:hover{
+                    color:$cyan;
+                }
+            }
+        }
+    }
+
+
+.footer{
+    color:$softBlue;
+    padding: 1em;
+    font-size: 20px;
+    text-align: center;
+    a{
+        text-decoration: none;
+        color:$cyan;
+    }
+
+}
